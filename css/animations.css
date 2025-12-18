@@ -1,0 +1,61 @@
+/* 애니메이션 정의 */
+
+/* 펄스 애니메이션 - UI 요소 강조 효과 */
+@keyframes pulse {
+  0%, 100% { 
+    opacity: 1; 
+  }
+  50% { 
+    opacity: 0.6; 
+  }
+}
+
+/* 히트마커 애니메이션 - 적 명중 시 표시 */
+@keyframes hitmarker {
+  0% { 
+    transform: translate(-50%, -50%) scale(1); 
+    opacity: 1; 
+  }
+  100% { 
+    transform: translate(-50%, -50%) scale(1.5); 
+    opacity: 0; 
+  }
+}
+
+.hitmarker {
+  animation: hitmarker 0.3s ease-out forwards;
+}
+
+/* 데미지 플래시 애니메이션 - 플레이어 피격 시 화면 효과 */
+@keyframes damageFlash {
+  0%, 100% { 
+    opacity: 0; 
+  }
+  50% { 
+    opacity: 0.3; 
+  }
+}
+
+.damage-flash {
+  animation: damageFlash 0.2s ease-out;
+}
+
+/* 폭발 애니메이션 - 로켓 런처 폭발 효과 */
+@keyframes explosion {
+  0% { 
+    transform: scale(0); 
+    opacity: 1; 
+  }
+  50% { 
+    opacity: 1; 
+  }
+  100% { 
+    transform: scale(1.5); 
+    opacity: 0; 
+  }
+}
+
+/* 뷰 트랜지션 설정 - 페이지 전환 시 자동 애니메이션 */
+@view-transition { 
+  navigation: auto; 
+}
